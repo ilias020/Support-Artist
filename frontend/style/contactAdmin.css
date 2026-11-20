@@ -1,0 +1,59 @@
+/* 
+  Contact Admin Table Styling - CSS File
+  Description: 
+  This CSS file defines the styles for the contact administration page. It includes general page
+  styling, table layout, styling for table cells and headers, and button effects for delete buttons.
+*/
+
+/* Algemene instellingen voor de pagina */
+body {
+  font-family: Arial, sans-serif; /* Standaard lettertype */
+  background-color: #f5f5f5; /* Achtergrondkleur */
+  margin: 0; /* Geen marge rond de pagina */
+  padding: 0; /* Geen padding rond de pagina */
+}
+
+/* De container rond de tabel */
+.container {
+  width: 80%; /* Breedte van de container */
+  margin: 50px auto; /* Ruimte boven en onder, en centreren */
+  background-color: #e0e0e0; /* Achtergrondkleur van de container */
+  padding: 20px; /* Ruimte binnenin de container */
+  border-radius: 8px; /* Ronde hoeken */
+}
+
+/* De standaard instellingen voor de tabel */
+table {
+  width: 100%; /* Tabel beslaat volledige breedte */
+  border-collapse: collapse; /* Grenzen samensmelten */
+  margin-top: 20px; /* Ruimte boven de tabel */
+}
+
+/* Algemene instellingen voor cel-inhoud */
+th,
+td {
+  border: 1px solid #ccc; /* Dunne grijze rand */
+  padding: 10px; /* Ruimte binnenin elke cel */
+  text-align: left; /* Tekst uitlijnen naar links */
+  background-color: #d3d3d3; /* Achtergrondkleur van cellen */
+}
+
+/* De specifieke stijl voor de kolomkoppen */
+th {
+  background-color: #bcbcbc; /* Donkerdere kleur voor koppen */
+}
+
+/* De stijl voor de DELETE-knoppen */
+.delete-btn {
+  background-color: #444; /* Donkergrijze kleur */
+  color: white; /* Witte tekst */
+  border: none; /* Heeft geen rand */
+  padding: 8px 12px; /* Ruimte rond de knop */
+  border-radius: 4px; /* Ronde hoeken */
+  cursor: pointer; /* Veranderd de cursor in pointer */
+}
+
+/* Hover-effect voor DELETE knoppen */
+.delete-btn:hover {
+  background-color: #ff4c4c; /* Rood bij hover */
+}

@@ -1,0 +1,50 @@
+/* Styles displayed posts in postSection */
+.postSection {
+  background-color: gray;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+  width: 500px;
+  border-radius: 10px;
+  display: flex; /* This allows for flexbox layout */
+  flex-direction: column; /* Ensures the content stacks vertically */
+}
+
+/* Styles artistName at the top of the profile page */
+#artistName {
+  display: inline-block;
+  text-align: center;
+}
+
+/* Styles createBttn and payBttn which will redirect the user to different pages */
+#createBttn,
+#payBttn {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+}
+
+/* Styles the artistName displayed within the posts */
+.postArtistName {
+  font-size: 20px;
+  margin-bottom: 10px; /* Space below artist name */
+  /* display: inline-block; /* Keeps artist name inline with buttons */
+}
+/*
+.editBttn, .deleteBttn {
+    margin-left: 10px; /* Adds spacing between buttons 
+    display: inline-block; /* Keeps buttons on the same line 
+} */
+
+/* Styles the description displayed within the posts */
+.description {
+  font-size: 18px; /* Corrected font size */
+  margin-top: 10px;
+}
+
+/* Styles the line that seperates the posts from the rest of the profile page */
+#line {
+  margin-bottom: 15px;
+}

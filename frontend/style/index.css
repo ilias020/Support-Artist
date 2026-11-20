@@ -1,0 +1,25 @@
+/* Styles header */
+#header {
+  background-color: gray;
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Styles signin and register buttons */
+#signInBttn,
+#registerBttn {
+  padding-right: 10px;
+  font-size: 18px;
+  /* text-decoration: none;
+    color: black; */
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+}
+
+/* Styles signin and register buttons */
+#signInBttn a,
+#registerBttn a {
+  text-decoration: none;
+  color: black;
+}

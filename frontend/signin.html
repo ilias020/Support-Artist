@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin page</title>
+    <link rel="stylesheet" href="./style/signin.css">
+    <link rel="stylesheet" href="./style/index.css">
+    <link rel="stylesheet" href="./style/footer.css">
+</head>
+<body>
+  <body>
+    <header id="header">
+      <button id="signInBttn"><a href="signin.html">Sign in</a></button>
+      <button id="registerBttn">
+        <a href="registratie.html">Create account</a>
+      </button>
+    </header>
+
+    </footer>
+    <section id="createPost">
+        <h2><label for="userName" id="userNameText"> Username </label></h2>
+        <br>
+        <input type="text" id="userName" name="userName" maxlength="20" required></input>
+
+        <br>
+
+        <h2><label for="password" id="passwordText"> Password </label></h2>
+        <br>
+        <input type="password" id="password" name="password" maxlength="255" required></input>
+
+        <br>
+        
+        <section id="errorSection"></section>
+
+        <br>
+
+        <button type="submit" id="signinBttn"> <h3>Sign in now</h3> </button> 
+    </section>
+
+    <footer>
+      <ul>
+        <li><a href="terms-of-use.html">Terms of use</a></li>
+        <li><a href="help-center&FAQ.html">Help center & FAQ</a></li>
+        <li><a href="about-us.html">About us</a></li>
+      </ul>
+    </footer>
+
+    <script type="module" src="./build/userSessionsApi.js" defer></script>
+    
+</body>
+</html>

@@ -1,0 +1,74 @@
+@baseUrl = http://localhost:4001
+
+### Status
+GET {{baseUrl}}/
+
+### Registreren
+POST {{baseUrl}}/user/register
+Content-Type: application/json
+
+{
+  "username": "fan2024",
+  "email": "fan2024@example.com",
+  "firstName": "Voornaam",
+  "lastName": "Achternaam",
+  "password": "Wachtwoord123!",
+  "userStatus": "Active",
+  "userRole": "User"
+}
+
+### Inloggen
+POST {{baseUrl}}/userSessions
+Content-Type: application/json
+
+{
+  "_username": "fan2024",
+  "_password": "Wachtwoord123!"
+}
+
+### Abonnement afsluiten
+POST {{baseUrl}}/subscription
+Content-Type: application/json
+
+{
+  "username": "fan2024",
+  "artistname": "artiest01",
+  "subscriptionType": "Basic"
+}
+
+### Abonnementen ophalen
+GET {{baseUrl}}/subscription/fan2024
+
+### Abonnementstatus wijzigen
+PATCH {{baseUrl}}/subscription/fan2024
+Content-Type: application/json
+
+{
+  "artistname": "artiest01",
+  "subscriptionType": "Basic"
+}
+
+### Posts van een artiest ophalen
+GET {{baseUrl}}/posts?artistName=artiest01
+
+### Contactformulier versturen
+POST {{baseUrl}}/contact
+Content-Type: application/json
+
+{
+  "_username": "fan2024",
+  "_message": "Ik heb een vraag over mijn abonnement."
+}
+
+### Contactberichten ophalen
+GET {{baseUrl}}/contact
+
+### Status van een contactbericht wijzigen
+PATCH {{baseUrl}}/contact
+Content-Type: application/json
+
+{
+  "formTime": "2024-01-01 12:00:00",
+  "username": "fan2024",
+  "messageStatus": "Resolved"
+}

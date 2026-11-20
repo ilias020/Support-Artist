@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style/contact_form.css" />
+  </head>
+  <body>
+    <section id="section-wrapper">
+      <article class="box-wrapper">
+        <aside class="info-wrap">
+          <h2 class="info-title">Contact Information</h2>
+          <h3 class="info-sub-title">
+            Fill up the form and our team will get back to you within 24 hours
+          </h3>
+        </aside>
+
+        <section class="form-wrap">
+          <section action="#" method="POST" novalidate>
+            <h2 class="form-title">Send us a message</h2>
+            <section class="form-fields">
+              <section class="form-group">
+                <label for="message"
+                  >Write your message (max 255 characters):</label
+                >
+
+                <textarea
+                  id="message"
+                  placeholder="Write your message"
+                  maxlength="255"
+                  required
+                ></textarea>
+                <p class="error-message">
+                  Message cannot exceed 255 characters!
+                </p>
+              </section>
+            </section>
+            <input
+              type="submit"
+              value="Send message"
+              class="submit-button"
+              id="submitBttn"
+            />
+          </section>
+
+          <section id="errorSection"></section>
+        </section>
+      </article>
+    </section>
+  </body>
+
+  <script type="module" src="./build/sendContactPostRequest.js" defer></script>
+</html>

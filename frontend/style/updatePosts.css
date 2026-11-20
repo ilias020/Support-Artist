@@ -1,0 +1,18 @@
+/* Styles description text area */
+#description {
+  height: 350px;
+  width: 700px;
+  font-size: 18px;
+}
+
+/* Styles error section */
+#errorSection {
+  margin-bottom: 100px;
+  color: red;
+}
+
+/* Styles 'Save changes' button */
+#updateBttn {
+  height: 80px;
+  width: 150px;
+}

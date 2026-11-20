@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support Questions</title>
+    <link rel="stylesheet" href="./style/contactAdmin.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Admin Support Questions Overview</h1>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Question</th>
+            <th>Message Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>artiest01</td>
+            <td>I want to change my username</td>
+            <td>
+              <select class="status-dropdown">
+                <option value="Pending" selected>Pending</option>
+                <option value="In progress">In progress</option>
+                <option value="Resolved">Resolved</option>
+              </select>
+            </td>
+            <td>
+              <button class="update-btn">Update</button>
+              <button class="delete-btn">Delete</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td>fan2024</td>
+            <td>I don’t have access to my account</td>
+            <td>
+              <select class="status-dropdown">
+                <option value="Pending">Pending</option>
+                <option value="In progress" selected>In progress</option>
+                <option value="Resolved">Resolved</option>
+              </select>
+            </td>
+            <td>
+              <button class="update-btn">Update</button>
+              <button class="delete-btn">Delete</button>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2"></td>
+            <td>
+              <select class="status-dropdown">
+                <option value="Pending">Pending</option>
+                <option value="In progress">In progress</option>
+                <option value="Resolved" selected>Resolved</option>
+              </select>
+            </td>
+            <td>
+              <button class="update-btn">Update</button>
+              <button class="delete-btn">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
+
+</html>

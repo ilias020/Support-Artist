@@ -1,0 +1,129 @@
+/* 
+  Contact Form Styling - CSS File
+  Description: 
+  This CSS file provides the styling for the contact form, including layout, colors, fonts, 
+  form input styles, error messages, and button hover effects.
+*/
+
+/* Algemene styling voor de body */
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+/* Styling voor de hoofdsectie die het formulier bevat */
+#section-wrapper {
+  display: flex; /* Flexbox om inhoud te centreren */
+  justify-content: center; /* Horizontaal centreren */
+  align-items: center; /* Verticaal centreren */
+  min-height: 100vh; /* Volledige hoogte van de viewport */
+  padding: 20px; /* Ruimte rondom */
+}
+
+/* Container met het formulier en de informatie */
+.box-wrapper {
+  display: flex; /* Flexbox voor zij-aan-zij layout */
+  background-color: #e8e8e8; /* Achtergrondkleur */
+  border-radius: 8px; /* Ronde hoeken */
+  overflow: hidden; /* Overloop verbergen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Schaduw rondom */
+  max-width: 1100px; /* Maximale breedte */
+  width: 100%; /* Volledige breedte */
+}
+
+/* Sidebar met contactinformatie */
+.info-wrap {
+  background-color: #c1c1c1; /* Achtergrondkleur */
+  color: #000; /* Tekstkleur */
+  padding: 30px; /* Ruimte rondom */
+  width: 35%; /* Breedtetoewijzing */
+  display: flex; /* Flexbox voor verticale layout */
+  flex-direction: column; /* Elementen onder elkaar */
+  justify-content: center; /* Inhoud centreren */
+}
+
+.info-title {
+  font-size: 26px; /* Tekstgrootte */
+  font-weight: 700; /* Vetgedrukt */
+  margin-bottom: 15px; /* Onderlinge ruimte */
+}
+
+.info-sub-title {
+  font-size: 16px; /* Kleinere tekstgrootte */
+  font-weight: 400; /* Normale gewicht */
+  margin-bottom: 20px; /* Ruimte onder de tekst */
+  line-height: 1.5; /* Regelhoogte */
+}
+
+/* Styling voor het formulier */
+.form-wrap {
+  background-color: #f5f5f5; /* Achtergrondkleur */
+  padding: 30px; /* Ruimte rondom */
+  flex: 1; /* Overige ruimte gebruiken */
+}
+
+.form-title {
+  font-size: 24px; /* Tekstgrootte */
+  font-weight: 700; /* Vetgedrukt */
+  margin-bottom: 25px; /* Ruimte onder de titel */
+  color: #333; /* Tekstkleur */
+}
+
+/* Styling voor het tekstvak */
+textarea {
+  width: 100%; /* Volledige breedte */
+  height: 200px; /* Hoogte */
+  padding: 15px; /* Binnenruimte */
+  border: 1px solid #ccc; /* Randkleur */
+  border-radius: 4px; /* Ronde hoeken */
+  font-size: 16px; /* Tekstgrootte */
+  resize: none; /* Uitschakelen van de resize-optie */
+  background-color: #fff; /* Achtergrondkleur */
+  margin-bottom: 20px; /* Ruimte onder het tekstvak */
+  box-sizing: border-box; /* Inclusieve boxmodel */
+}
+
+textarea::placeholder {
+  color: #aaa; /* De placeholder-kleur */
+}
+
+/* De styling voor de verzendknop */
+.submit-button {
+  padding: 15px 25px; /* Binnenruimte */
+  border: none; /* Heeft geen rand */
+  border-radius: 4px; /* Ronde hoeken */
+  background-color: #808080; /* Grijze achtergrondkleur */
+  color: #fff; /* Witte tekst */
+  font-size: 18px; /* Tekstgrootte */
+  font-weight: 500; /* Tekstgewicht */
+  cursor: pointer; /* Wijzigen naar pointer */
+  transition: background-color 0.3s ease; /* Soepel hover-effect */
+}
+
+.submit-button:hover {
+  background-color: #6c6c6c; /* Donkerdere kleur bij hover */
+}
+
+/* Styling voor labels. */
+label {
+  display: block; /* Labels boven het tekstvak */
+  font-size: 14px; /* Kleinere tekst */
+  font-weight: 400; /* Normale tekststijl */
+  color: #333; /* Tekstkleur */
+  margin-bottom: 8px; /* Ruimte onder het label */
+}
+
+/* Errorbericht standaard verbergen */
+.error-message {
+  font-size: 14px; /* Tekstgrootte van foutmelding */
+  color: red; /* Rood kleur als visuele waarschuwing */
+  display: none; /* het verbergen van de melding */
+  margin-top: 5px; /* De ruimte boven het bericht */
+}
+
+/* Foutbericht tonen bij een ongeldig tekstvak */
+textarea:invalid ~ .error-message {
+  display: block; /* De melding zichtbaar maken */
+}

@@ -1,0 +1,52 @@
+/* Styles the header */
+#header {
+  background-color: gray;
+  position: relative; /* cause navBar */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Styles burgerMenu */
+#burgerMenu {
+  background: none;
+  font-size: 30px;
+  border: none;
+  color: black; /* white? */
+  cursor: pointer; /* Change cursor on hover */
+}
+/* Styles navBar and hides it at first */
+#navBar {
+  display: none; /* Initially hide the nav bar */
+  position: absolute; /* Position it outside the regular flow */
+  top: 100%; /* Ensures it is below the header */
+  left: 0;
+  width: 250px;
+}
+
+/* When nav bar is visible */
+#navBar.show {
+  display: block; /* Make nav bar visible when toggled */
+}
+
+/* Styles nav buttons */
+.navBttn {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: 1px white;
+  text-align: center;
+}
+
+/* Styles the text in the nav buttons */
+.navText {
+  color: white;
+  font-size: 18px;
+  text-decoration: none; /* Remove underline */
+}
+
+/* Styles sign out button */
+#signOutBttn {
+  margin-right: 10px;
+  font-size: 18px;
+}

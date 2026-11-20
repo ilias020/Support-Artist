@@ -1,0 +1,25 @@
+{
+  "name": "support-artist-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Frontend voor Support Artist",
+  "type": "module",
+  "scripts": {
+    "build": "tsc -p .",
+    "watch": "tsc -p . --watch",
+    "serve": "http-server -p 8080 -c-1",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:check": "prettier --check \"src/**/*.ts\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.0",
+    "eslint": "^9.39.0",
+    "eslint-config-prettier": "^10.1.5",
+    "http-server": "^14.1.1",
+    "prettier": "^3.5.3",
+    "typescript": "^5.5.3",
+    "typescript-eslint": "^8.32.1"
+  }
+}

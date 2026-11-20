@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payment</title>
+    <link rel="stylesheet" href="./style/paying-page.css" />
+  </head>
+  <body>
+    <section class="mainSection">
+      <article>
+        <span class="headerPlusBut">
+          <button class="backButton" onclick="window.history.back()">
+            <img src="img/back-button.svg" alt="Back" />
+          </button>
+
+          <h1>Payment details</h1>
+        </span>
+        <h2>Choose your subscription:</h2>
+        <form id="subscriptionForm">
+          <label>
+            <input
+              type="radio"
+              name="subscription"
+              value="Basic"
+              data-price="4"
+              checked
+            />
+            Basic (€4)
+          </label>
+          <br />
+          <label>
+            <input
+              type="radio"
+              name="subscription"
+              value="Standard"
+              data-price="6"
+            />
+            Standard (€6)
+          </label>
+          <br />
+          <label>
+            <input
+              type="radio"
+              name="subscription"
+              value="Pro Supporter"
+              data-price="10"
+            />
+            Pro Supporter (€10)
+          </label>
+        </form>
+
+        <h2>Pay with iDeal:</h2>
+        <p class="paymentMethods">
+          <button class="idealButton" id="idealButton">
+            <img src="img/ideal-logo.svg" alt="iDeal" />
+          </button>
+        </p>
+        <br />
+        <section id="modal" class="modal hidden">
+          <section class="modal-content">
+            <button class="close-button" id="closeModal">x</button>
+            <h2>Select Your Bank</h2>
+            <ul class="bankUl">
+              <li class="bankLi"><button>ING Bank</button></li>
+              <li class="bankLi"><button>ABN AMRO</button></li>
+              <li class="bankLi"><button>Rabobank</button></li>
+              <li class="bankLi"><button>SNS Bank</button></li>
+              <li class="bankLi"><button>ASN Bank</button></li>
+              <li class="bankLi"><button>RegioBank</button></li>
+              <li class="bankLi"><button>Triodos Bank</button></li>
+              <li class="bankLi"><button>Van Lanschot</button></li>
+              <li class="bankLi"><button>Knab</button></li>
+              <li class="bankLi"><button>Bunq</button></li>
+            </ul>
+          </section>
+        </section>
+
+        <h2>Pay with your Credit Card:</h2>
+
+        <form id="payingForm">
+          <label for="nameOnCardInput">Name on your credit card</label>
+          <input
+            type="text"
+            id="nameOnCardInput"
+            name="nameOnCard"
+            maxlength="26"
+            oninput="this.value = this.value.replace(/[^a-zA-Z\s]/g, '')"
+          />
+          <p class="hidden redField" id="nameOnCardPar">
+            Please enter name on the card correctly!
+          </p>
+
+          <label for="cardNumberInput">Your card number</label>
+          <input
+            type="text"
+            id="cardNumberInput"
+            name="cardNumber"
+            placeholder="1234 1234 1234 1234"
+            maxlength="19"
+            oninput="this.value = this.value.replace(/\D/g, '').replace(/(\d{4})(?=\d)/g, '$1 ').slice(0, 19)"
+          />
+          <p class="hidden redField" id="cardNumberPar">
+            Please enter your card number correctly!
+          </p>
+
+          <label for="expringDate">Expiration date</label>
+          <input
+            type="text"
+            id="expringDateInput"
+            name="expringDate"
+            placeholder="MM/YY"
+            maxlength="5"
+            oninput="this.value = this.value.replace(/\D/g, '').replace(/(\d{2})(\d{0,2})/, '$1/$2')"
+          />
+          <p class="hidden redField" id="expiringDatePar">
+            Please enter expiring date correctly!
+          </p>
+
+          <label for="CVV">CVV-code</label>
+          <input
+            type="text"
+            id="CVVInput"
+            name="CVV"
+            placeholder="CVV"
+            maxlength="3"
+            oninput="this.value = this.value.replace(/\D/g, '')"
+          />
+          <p class="hidden redField" id="CVVPar">
+            Please enter CVV-code correctly!
+          </p>
+        </form>
+        <p class="payButtonContainer">
+          <button id="payButton" class="payButton" type="button">
+            Pay now
+          </button>
+        </p>
+        <footer>
+          <ul>
+            <li><a href="terms-of-use.html">Terms of use</a></li>
+            <li><a href="help-center&FAQ.html">Help center & FAQ</a></li>
+            <li><a href="about-us.html">About us</a></li>
+          </ul>
+        </footer>
+      </article>
+      <aside>
+        <section class="asideSection">
+          <h2>Payment overview</h2>
+          <p>Subscription for:</p>
+          <p><strong>Lena Sculptura</strong></p>
+          <hr />
+          <p>The subscription you chose:</p>
+          <p id="subscriptionType">Basic</p>
+          <hr />
+          <p>Monthly payment (€):</p>
+          <p id="subscriptionPrice">4</p>
+        </section>
+      </aside>
+    </section>
+    <script type="module" src="./build/paying-page.js" defer></script>
+  </body>
+</html>

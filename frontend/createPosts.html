@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create post</title>
+    <link rel="stylesheet" href="./style/createPosts.css" />
+    <link rel="stylesheet" href="./style/home.css" />
+    <link rel="stylesheet" href="./style/footer.css" />
+  </head>
+  <body>
+    <header id="header">
+      <button id="burgerMenu">&#9776;</button>
+      <nav id="navBar">
+        <ul>
+          <li class="navBttn">
+            <a href="home.html" class="navText" id="home"> Home page </a>
+          </li>
+          <li class="navBttn">
+            <a href="my-subscriptions.html" class="navText">
+              My subscriptions
+            </a>
+          </li>
+          <li class="navBttn">
+            <a href="contactAdmin.html" class="navText" id="contactAdmin">
+              Contact forms
+            </a>
+          </li>
+          <li class="navBttn">
+            <a href="profile.html" class="navText" id="profile"> My profile </a>
+          </li>
+        </ul>
+      </nav>
+      <button id="signOutBttn">Sign out</button>
+    </header>
+
+    <section id="createPost">
+      <h1>
+        <label for="description" id="descriptionText">
+          Add your description here:
+        </label>
+      </h1>
+      <br />
+      <textarea
+        id="description"
+        name="description"
+        maxlength="200"
+        required
+      ></textarea>
+
+      <br />
+
+      <section id="errorSection"></section>
+
+      <br />
+
+      <button type="submit" id="uploadBttn"><h3>Create post</h3></button>
+    </section>
+
+    <footer>
+      <ul>
+        <li><a href="terms-of-use.html">Terms of use</a></li>
+        <li><a href="help-center&FAQ.html">Help center & FAQ</a></li>
+        <li><a href="about-us.html">About us</a></li>
+      </ul>
+    </footer>
+
+    <script type="module" src="./build/postCreateApi.js" defer></script>
+    <script type="module" src="./build/home.js" defer></script>
+  </body>
+</html>

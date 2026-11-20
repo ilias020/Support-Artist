@@ -1,0 +1,17 @@
+/* Styles userName input field */
+#userName {
+  width: 250px;
+  font-size: 18px;
+}
+
+/* Styles password input field */
+#password {
+  width: 250px;
+  font-size: 18fpx;
+}
+
+/* Styles error section */
+#errorSection {
+  margin-bottom: 100px;
+  color: red;
+}

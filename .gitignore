@@ -1,0 +1,11 @@
+# Geheimen
+.env
+
+# Dependencies en builds
+node_modules/
+build/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
